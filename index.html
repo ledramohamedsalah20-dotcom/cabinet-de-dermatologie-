@@ -1,0 +1,1431 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Dr BELKORISSAT | Dermatologie & Esthétique à Kouba</title>
+
+  <meta
+    name="description"
+    content="Cabinet de Dermatologie & Esthétique Dr BELKORISSAT à Kouba, Alger. Consultation dermatologique, acné, eczéma, psoriasis et laser dermatologique."
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    :root {
+      --green: #173d35;
+      --green-light: #265b4e;
+      --green-soft: #dce9e4;
+
+      --cream: #f8f5ef;
+      --cream-dark: #eee7db;
+
+      --gold: #b99461;
+      --gold-light: #d8c2a1;
+
+      --white: #ffffff;
+      --text: #19302b;
+      --muted: #687672;
+
+      --border: rgba(23, 61, 53, 0.12);
+
+      --shadow:
+        0 20px 60px rgba(23, 61, 53, 0.10);
+
+      --radius: 28px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "DM Sans", sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(1180px, calc(100% - 40px));
+      margin: auto;
+    }
+
+    /* =========================
+       NAVBAR
+    ========================== */
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+
+      background: rgba(248, 245, 239, 0.92);
+      backdrop-filter: blur(16px);
+
+      border-bottom: 1px solid rgba(23, 61, 53, 0.08);
+    }
+
+    nav {
+      height: 82px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+    }
+
+    .logo-symbol {
+      width: 46px;
+      height: 46px;
+
+      border: 1px solid var(--gold);
+      border-radius: 50%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      font-family: "Playfair Display", serif;
+      font-size: 23px;
+      color: var(--green);
+    }
+
+    .logo-text strong {
+      display: block;
+
+      font-family: "Playfair Display", serif;
+      font-size: 19px;
+      letter-spacing: .3px;
+    }
+
+    .logo-text span {
+      font-size: 10px;
+      letter-spacing: 2.4px;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+
+      list-style: none;
+      font-size: 14px;
+    }
+
+    .nav-links a {
+      transition: .25s;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold);
+    }
+
+    .nav-button {
+      padding: 13px 22px;
+
+      background: var(--green);
+      color: white;
+
+      border-radius: 999px;
+
+      font-weight: 600;
+      font-size: 13px;
+    }
+
+    /* =========================
+       HERO
+    ========================== */
+
+    .hero {
+      min-height: 100vh;
+      padding: 145px 0 70px;
+
+      display: flex;
+      align-items: center;
+
+      position: relative;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+
+      width: 500px;
+      height: 500px;
+
+      border-radius: 50%;
+      background:
+        radial-gradient(
+          circle,
+          rgba(185, 148, 97, .16),
+          transparent 68%
+        );
+
+      left: -200px;
+      top: 130px;
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.02fr .98fr;
+      gap: 70px;
+
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+
+      margin-bottom: 23px;
+
+      color: var(--green-light);
+
+      text-transform: uppercase;
+      letter-spacing: 2px;
+
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 35px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    h1 {
+      font-family: "Playfair Display", serif;
+
+      font-size: clamp(50px, 6vw, 82px);
+      line-height: .99;
+
+      font-weight: 600;
+      letter-spacing: -2px;
+
+      max-width: 720px;
+    }
+
+    h1 span {
+      color: var(--green-light);
+      font-style: italic;
+    }
+
+    .hero-description {
+      max-width: 610px;
+
+      margin: 28px 0 35px;
+
+      font-size: 17px;
+      color: var(--muted);
+      line-height: 1.9;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+
+      padding: 16px 25px;
+
+      border-radius: 999px;
+
+      font-size: 14px;
+      font-weight: 600;
+
+      transition: .25s;
+    }
+
+    .btn-primary {
+      color: white;
+      background: var(--green);
+    }
+
+    .btn-primary:hover {
+      background: var(--green-light);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.45);
+    }
+
+    .btn-secondary:hover {
+      background: white;
+    }
+
+    /* hero image */
+
+    .hero-visual {
+      position: relative;
+    }
+
+    .hero-image {
+      height: 620px;
+      border-radius: 160px 160px 24px 24px;
+      overflow: hidden;
+
+      position: relative;
+
+      box-shadow: var(--shadow);
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(23,61,53,.05),
+          rgba(185,148,97,.15)
+        );
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-image::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+
+      background:
+        linear-gradient(
+          to top,
+          rgba(16,45,38,.25),
+          transparent 42%
+        );
+    }
+
+    .rating-card {
+      position: absolute;
+      left: -45px;
+      bottom: 55px;
+      z-index: 10;
+
+      padding: 20px 25px;
+
+      border-radius: 20px;
+
+      background: rgba(255,255,255,.94);
+      backdrop-filter: blur(15px);
+
+      box-shadow: var(--shadow);
+    }
+
+    .rating-card .stars {
+      color: #bd9255;
+      letter-spacing: 2px;
+      font-size: 14px;
+    }
+
+    .rating-number {
+      font-family: "Playfair Display", serif;
+      font-size: 28px;
+      font-weight: 600;
+    }
+
+    .rating-card small {
+      display: block;
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    /* =========================
+       TRUST STRIP
+    ========================== */
+
+    .trust {
+      background: var(--green);
+      color: white;
+
+      padding: 27px 0;
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .trust-item {
+      text-align: center;
+      padding: 0 15px;
+
+      border-right: 1px solid rgba(255,255,255,.15);
+    }
+
+    .trust-item:last-child {
+      border-right: none;
+    }
+
+    .trust-item strong {
+      font-family: "Playfair Display", serif;
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    .trust-item span {
+      display: block;
+
+      margin-top: 4px;
+
+      color: rgba(255,255,255,.66);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    /* =========================
+       COMMON SECTION
+    ========================== */
+
+    section {
+      padding: 110px 0;
+    }
+
+    .section-header {
+      max-width: 740px;
+      margin-bottom: 55px;
+    }
+
+    .section-title {
+      margin-top: 12px;
+
+      font-family: "Playfair Display", serif;
+      font-size: clamp(38px, 4vw, 58px);
+      line-height: 1.1;
+
+      font-weight: 600;
+      letter-spacing: -1px;
+    }
+
+    .section-description {
+      margin-top: 18px;
+
+      color: var(--muted);
+      font-size: 16px;
+
+      max-width: 620px;
+    }
+
+    /* =========================
+       SERVICES
+    ========================== */
+
+    .services {
+      background: white;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .service-card {
+      min-height: 290px;
+
+      padding: 34px;
+
+      border: 1px solid var(--border);
+      border-radius: 25px;
+
+      background: var(--white);
+
+      display: flex;
+      flex-direction: column;
+
+      transition: .3s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-7px);
+      box-shadow: var(--shadow);
+      border-color: transparent;
+    }
+
+    .service-number {
+      color: var(--gold);
+
+      font-family: "Playfair Display", serif;
+      font-size: 14px;
+
+      margin-bottom: auto;
+    }
+
+    .service-card h3 {
+      margin: 55px 0 12px;
+
+      font-family: "Playfair Display", serif;
+      font-size: 26px;
+      font-weight: 600;
+    }
+
+    .service-card p {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .service-card.featured {
+      background: var(--green);
+      color: white;
+      border: none;
+    }
+
+    .service-card.featured p {
+      color: rgba(255,255,255,.68);
+    }
+
+    .service-card.featured .service-number {
+      color: var(--gold-light);
+    }
+
+    /* =========================
+       PHILOSOPHY
+    ========================== */
+
+    .philosophy-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 80px;
+
+      align-items: center;
+    }
+
+    .philosophy-visual {
+      min-height: 560px;
+
+      border-radius: var(--radius);
+
+      position: relative;
+      overflow: hidden;
+
+      background:
+        linear-gradient(
+          145deg,
+          #d4e1dc,
+          #eee5d8
+        );
+    }
+
+    .philosophy-visual img {
+      width: 100%;
+      height: 560px;
+      object-fit: cover;
+    }
+
+    .philosophy-content h2 {
+      font-family: "Playfair Display", serif;
+
+      font-size: clamp(40px, 4vw, 60px);
+      line-height: 1.1;
+
+      margin-bottom: 25px;
+    }
+
+    .philosophy-content > p {
+      color: var(--muted);
+      line-height: 1.9;
+    }
+
+    .benefits {
+      margin-top: 38px;
+    }
+
+    .benefit {
+      padding: 20px 0;
+
+      display: flex;
+      gap: 17px;
+
+      border-bottom: 1px solid var(--border);
+    }
+
+    .check {
+      width: 28px;
+      height: 28px;
+      min-width: 28px;
+
+      border-radius: 50%;
+
+      background: var(--green-soft);
+      color: var(--green);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .benefit strong {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .benefit p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* =========================
+       REVIEW / QUOTE
+    ========================== */
+
+    .testimonial {
+      background: var(--cream-dark);
+    }
+
+    .quote-box {
+      max-width: 900px;
+      margin: auto;
+
+      text-align: center;
+    }
+
+    .quote-mark {
+      color: var(--gold);
+      font-family: "Playfair Display", serif;
+      font-size: 80px;
+      line-height: .6;
+    }
+
+    .quote-box h2 {
+      margin: 28px 0 25px;
+
+      font-family: "Playfair Display", serif;
+
+      font-size: clamp(34px, 4vw, 52px);
+      line-height: 1.25;
+
+      font-weight: 500;
+    }
+
+    .google-rating {
+      display: inline-flex;
+      gap: 10px;
+      align-items: center;
+
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .google-rating strong {
+      color: var(--text);
+    }
+
+    /* =========================
+       CONTACT
+    ========================== */
+
+    .contact {
+      background: var(--green);
+      color: white;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 70px;
+
+      align-items: center;
+    }
+
+    .contact h2 {
+      max-width: 700px;
+
+      font-family: "Playfair Display", serif;
+      font-size: clamp(44px, 5vw, 70px);
+      line-height: 1.04;
+
+      font-weight: 500;
+    }
+
+    .contact h2 em {
+      color: var(--gold-light);
+      font-weight: 500;
+    }
+
+    .contact > .container > .contact-grid > div > p {
+      margin-top: 24px;
+
+      max-width: 600px;
+
+      color: rgba(255,255,255,.67);
+      line-height: 1.8;
+    }
+
+    .contact-card {
+      background: white;
+      color: var(--text);
+
+      border-radius: 25px;
+
+      padding: 35px;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .info-row {
+      padding-bottom: 22px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .info-row:last-child {
+      padding-bottom: 0;
+      border: 0;
+    }
+
+    .info-label {
+      margin-bottom: 6px;
+
+      color: var(--gold);
+
+      font-size: 10px;
+      font-weight: 700;
+
+      text-transform: uppercase;
+      letter-spacing: 1.8px;
+    }
+
+    .info-value {
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .contact-card .btn {
+      width: 100%;
+      margin-top: 30px;
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer {
+      padding: 35px 0;
+      background: #102e27;
+      color: rgba(255,255,255,.55);
+    }
+
+    .footer-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+
+      font-size: 12px;
+    }
+
+    .footer-brand {
+      color: white;
+
+      font-family: "Playfair Display", serif;
+      font-size: 17px;
+    }
+
+    /* =========================
+       FLOATING PHONE
+    ========================== */
+
+    .floating-call {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+
+      width: 58px;
+      height: 58px;
+
+      border-radius: 50%;
+
+      background: var(--green);
+      color: white;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      box-shadow: 0 14px 35px rgba(23,61,53,.28);
+
+      z-index: 900;
+
+      font-size: 20px;
+    }
+
+    /* =========================
+       MOBILE
+    ========================== */
+
+    @media (max-width: 950px) {
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero-grid,
+      .philosophy-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 130px;
+      }
+
+      .hero-grid {
+        gap: 50px;
+      }
+
+      .hero-image {
+        height: 500px;
+      }
+
+      .rating-card {
+        left: 20px;
+        bottom: 20px;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .trust-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 25px 0;
+      }
+
+      .trust-item:nth-child(2) {
+        border-right: none;
+      }
+    }
+
+    @media (max-width: 650px) {
+
+      .container {
+        width: min(100% - 28px, 1180px);
+      }
+
+      nav {
+        height: 72px;
+      }
+
+      .logo-text span {
+        display: none;
+      }
+
+      .nav-button {
+        padding: 11px 15px;
+        font-size: 11px;
+      }
+
+      .hero {
+        padding-top: 115px;
+      }
+
+      h1 {
+        font-size: 49px;
+      }
+
+      .hero-description {
+        font-size: 15px;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .hero-image {
+        height: 430px;
+        border-radius: 100px 100px 20px 20px;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .trust-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      section {
+        padding: 75px 0;
+      }
+
+      .philosophy-visual,
+      .philosophy-visual img {
+        min-height: 420px;
+        height: 420px;
+      }
+
+      .footer-content {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+
+<body>
+
+  <!-- =======================
+       NAVIGATION
+  ======================== -->
+
+  <header>
+    <div class="container">
+      <nav>
+
+        <a href="#" class="logo">
+
+          <div class="logo-symbol">
+            B
+          </div>
+
+          <div class="logo-text">
+            <strong>Dr Belkorissat</strong>
+            <span>Dermatologie · Esthétique</span>
+          </div>
+
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="#cabinet">Le cabinet</a></li>
+          <li><a href="#expertises">Expertises</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <a href="tel:+213542802001" class="nav-button">
+          Prendre rendez-vous
+        </a>
+
+      </nav>
+    </div>
+  </header>
+
+
+  <!-- =======================
+       HERO
+  ======================== -->
+
+  <main>
+
+    <section class="hero">
+
+      <div class="container hero-grid">
+
+        <div>
+
+          <div class="eyebrow">
+            Dermatologie & Esthétique · Kouba
+          </div>
+
+          <h1>
+            Prendre soin de
+            votre <span>peau.</span>
+          </h1>
+
+          <p class="hero-description">
+            Une approche médicale personnalisée de la dermatologie,
+            associant diagnostic, traitement et soins dermatologiques
+            dans un environnement professionnel et rassurant.
+          </p>
+
+          <div class="hero-actions">
+
+            <a href="tel:+213542802001" class="btn btn-primary">
+              Prendre rendez-vous
+              <span>→</span>
+            </a>
+
+            <a
+              href="https://maps.app.goo.gl/poHxGi4L1Y47ENez8"
+              target="_blank"
+              class="btn btn-secondary"
+            >
+              Voir l’itinéraire
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="hero-visual">
+
+          <div class="hero-image">
+
+            <!-- Image de démonstration.
+                 À remplacer idéalement par une vraie photo du cabinet. -->
+
+            <img
+              src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1200&q=85"
+              alt="Dermatologie et soin de la peau"
+            >
+
+          </div>
+
+          <div class="rating-card">
+            <div class="stars">★★★★★</div>
+            <div class="rating-number">4,6 / 5</div>
+            <small>42 avis Google</small>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =======================
+         TRUST
+    ======================== -->
+
+    <div class="trust">
+
+      <div class="container trust-grid">
+
+        <div class="trust-item">
+          <strong>Dermatologie</strong>
+          <span>Consultation médicale</span>
+        </div>
+
+        <div class="trust-item">
+          <strong>Laser</strong>
+          <span>Dermatologique</span>
+        </div>
+
+        <div class="trust-item">
+          <strong>4,6 / 5</strong>
+          <span>Avis Google</span>
+        </div>
+
+        <div class="trust-item">
+          <strong>Kouba</strong>
+          <span>Alger</span>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- =======================
+         SERVICES
+    ======================== -->
+
+    <section class="services" id="expertises">
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <div class="eyebrow">
+            Domaines de prise en charge
+          </div>
+
+          <h2 class="section-title">
+            Une prise en charge adaptée
+            à votre peau.
+          </h2>
+
+          <p class="section-description">
+            Le cabinet accompagne ses patients dans le diagnostic
+            et la prise en charge de différentes affections
+            dermatologiques ainsi que dans les soins par laser.
+          </p>
+
+        </div>
+
+
+        <div class="services-grid">
+
+          <article class="service-card featured">
+            <span class="service-number">01</span>
+
+            <h3>Acné</h3>
+
+            <p>
+              Évaluation dermatologique et prise en charge adaptée
+              selon le type d’acné et les besoins du patient.
+            </p>
+          </article>
+
+
+          <article class="service-card">
+            <span class="service-number">02</span>
+
+            <h3>Eczéma</h3>
+
+            <p>
+              Diagnostic et suivi dermatologique pour mieux
+              contrôler les symptômes et les poussées.
+            </p>
+          </article>
+
+
+          <article class="service-card">
+            <span class="service-number">03</span>
+
+            <h3>Psoriasis</h3>
+
+            <p>
+              Consultation et suivi personnalisé des manifestations
+              cutanées du psoriasis.
+            </p>
+          </article>
+
+
+          <article class="service-card">
+            <span class="service-number">04</span>
+
+            <h3>Dermatite</h3>
+
+            <p>
+              Identification des causes possibles et mise en place
+              d’une prise en charge dermatologique adaptée.
+            </p>
+          </article>
+
+
+          <article class="service-card">
+            <span class="service-number">05</span>
+
+            <h3>Laser dermatologique</h3>
+
+            <p>
+              Techniques laser dermatologiques selon indication
+              médicale et après évaluation préalable.
+            </p>
+          </article>
+
+
+          <article class="service-card">
+            <span class="service-number">06</span>
+
+            <h3>Consultation</h3>
+
+            <p>
+              Consultation dermatologique pour l’évaluation,
+              le diagnostic et l’orientation thérapeutique.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =======================
+         CABINET
+    ======================== -->
+
+    <section id="cabinet">
+
+      <div class="container philosophy-grid">
+
+        <div class="philosophy-visual">
+
+          <img
+            src="https://images.unsplash.com/photo-1612817288484-6f916006741a?auto=format&fit=crop&w=1200&q=85"
+            alt="Soins dermatologiques"
+          >
+
+        </div>
+
+
+        <div class="philosophy-content">
+
+          <div class="eyebrow">
+            Le cabinet
+          </div>
+
+          <h2>
+            La dermatologie au service
+            de votre bien-être.
+          </h2>
+
+          <p>
+            Chaque peau est différente. La prise en charge commence
+            par une consultation permettant d’identifier vos besoins
+            et de déterminer l’approche dermatologique la plus adaptée.
+          </p>
+
+
+          <div class="benefits">
+
+            <div class="benefit">
+
+              <div class="check">✓</div>
+
+              <div>
+                <strong>Approche personnalisée</strong>
+                <p>
+                  Une prise en charge adaptée à chaque patient
+                  et à chaque problématique cutanée.
+                </p>
+              </div>
+
+            </div>
+
+
+            <div class="benefit">
+
+              <div class="check">✓</div>
+
+              <div>
+                <strong>Dermatologie médicale</strong>
+                <p>
+                  Diagnostic et accompagnement des principales
+                  affections de la peau.
+                </p>
+              </div>
+
+            </div>
+
+
+            <div class="benefit">
+
+              <div class="check">✓</div>
+
+              <div>
+                <strong>Technologies dermatologiques</strong>
+                <p>
+                  Prise en charge intégrant notamment
+                  le laser dermatologique.
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =======================
+         GOOGLE RATING
+    ======================== -->
+
+    <section class="testimonial">
+
+      <div class="container">
+
+        <div class="quote-box">
+
+          <div class="quote-mark">“</div>
+
+          <h2>
+            Votre peau mérite une attention
+            médicale personnalisée.
+          </h2>
+
+          <div class="google-rating">
+            <span>★★★★★</span>
+            <strong>4,6 / 5</strong>
+            <span>· 42 avis Google</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =======================
+         CONTACT
+    ======================== -->
+
+    <section class="contact" id="contact">
+
+      <div class="container contact-grid">
+
+        <div>
+
+          <div class="eyebrow" style="color:#d8c2a1;">
+            Consultation
+          </div>
+
+          <h2>
+            Prenez soin de votre peau
+            <em>dès aujourd’hui.</em>
+          </h2>
+
+          <p>
+            Pour une consultation dermatologique ou pour obtenir
+            davantage d’informations, contactez directement
+            le cabinet du Dr Belkorissat à Kouba.
+          </p>
+
+        </div>
+
+
+        <div class="contact-card">
+
+          <div class="contact-info">
+
+
+            <div class="info-row">
+
+              <div class="info-label">
+                Téléphone
+              </div>
+
+              <div class="info-value">
+                +213 542 80 20 01
+              </div>
+
+            </div>
+
+
+            <div class="info-row">
+
+              <div class="info-label">
+                Adresse
+              </div>
+
+              <div class="info-value">
+                24 Av. des Frères Abdeslami<br>
+                Kouba, Alger
+              </div>
+
+            </div>
+
+
+            <div class="info-row">
+
+              <div class="info-label">
+                Horaires indicatifs
+              </div>
+
+              <div class="info-value">
+                09:00 – 16:00
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <a href="tel:+213542802001" class="btn btn-primary">
+            Appeler le cabinet
+          </a>
+
+          <a
+            href="https://maps.app.goo.gl/poHxGi4L1Y47ENez8"
+            target="_blank"
+            class="btn btn-secondary"
+            style="margin-top:10px;"
+          >
+            Ouvrir dans Google Maps
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =======================
+       FOOTER
+  ======================== -->
+
+  <footer>
+
+    <div class="container footer-content">
+
+      <div class="footer-brand">
+        Dr Belkorissat
+      </div>
+
+      <div>
+        Dermatologie & Esthétique · Kouba, Alger
+      </div>
+
+      <div>
+        © 2026 — Tous droits réservés
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- Mobile call button -->
+
+  <a
+    class="floating-call"
+    href="tel:+213542802001"
+    aria-label="Appeler le cabinet"
+  >
+    ☎
+  </a>
+
+</body>
+</html>
